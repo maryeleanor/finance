@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Finance
+{% endblock %}
+
+{% block main %}
+      <h1>Your Transaction History</h1>
+      <br>
+        <table  class="table table-striped">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col"> # of Shares</th>
+                <th scope="col">  Price </th>
+                <th scope="col"> Transacted </th>
+            </tr>
+
+            <tbody>
+
+            {% for history in history %}
+            <tr scope="row">
+                <td>{{ history["symbol"] }}</td>
+                <td>{{ history["shares"] }}</td>
+                <td> {{ history["price"] }}</td>
+                <td> {{ history["date"] }} </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+
+{% endblock %}

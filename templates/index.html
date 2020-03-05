@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Finance
+{% endblock %}
+
+{% block main %}
+      <h1>Your Finances</h1>
+      <br>
+        <table  class="table table-striped">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Symbol</th>
+                <th scope="col"> # of Shares</th>
+                <th scope="col"> Current Price </th>
+                <th scope="col"> Total </th>
+            </tr>
+
+            <tbody>
+                {% for stock in stocks %}
+                <tr scope="row">
+                    <td>{{ stock["stock_name"] }}</td>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td> {{ stock["price"] }}</td>
+                    <td> {{ stock["total"] }} </td>
+                </tr>
+                {% endfor %}
+
+            <tr scope="row">
+                <td>  Cash </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash }}</td>
+            </tr>
+
+            <tr scope="row" class="bold">
+                <td>  Total </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ curent_total }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+{% endblock %}

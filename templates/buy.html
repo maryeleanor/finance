@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <h2> You currently have {{ cash }} </h2>
+    <br><br>
+
+    <div class="float-left title">
+        <h3> Stock symbol to purchase:</h3>
+        <h3> How many shares?</h3>
+    </div>
+
+    <div class="float-center">
+        <form action="/buy" method="post">
+            <div class="form-group">
+                <input autocomplete="off" id="symbol" autofocus class="form-control" name="symbol" placeholder="symbol" type="text">
+            </div>
+             <div class="form-group">
+                <input autocomplete="off" id="shares" autofocus class="form-control" name="shares" placeholder="shares" type="text">
+            </div>
+            <button class="btn btn-primary" id="submit" type="submit" disabled>Buy</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('#symbol').onkeyup = function() {
+            if (document.querySelector('#symbol').value === '') {
+                document.querySelector('#submit').disabled = true;
+            }
+            else {
+                document.querySelector('#submit').disabled = false;
+            }
+        }
+
+        document.querySelector('#shares').onkeyup = function() {
+            if (document.querySelector('#shares').value === '') {
+                document.querySelector('#submit').disabled = true;
+            }
+            else {
+                document.querySelector('#submit').disabled = false;
+            }
+
+        }
+    </script>
+
+    <div class="clearfix">
+    </div>
+    <br><br>
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"> 	<span class="bold">	AAL	</span>-	American Airlines Group Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	AAPL	</span>-	Apple Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	AMAT	</span>-	Applied Materials, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	AMD	</span>-	Advanced Micro Devices, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	AMZN	</span>-	Amazon.com Inc	</li>
+            <li class="list-group-item"> 	<span class="bold">	BAC	</span>-	Bank of America Corporation	</li>
+            <li class="list-group-item"> 	<span class="bold">	BBD	</span>-	Banco Bradesco S.A.	</li>
+            <li class="list-group-item"> 	<span class="bold">	BRK.A	</span>-	Berkshire Hathaway Inc	</li>
+            <li class="list-group-item"> 	<span class="bold">	CNHI	</span>-	CNH Industrial N.V.	</li>
+            <li class="list-group-item"> 	<span class="bold">	COP	</span>-	ConocoPhillips	</li>
+            <li class="list-group-item"> 	<span class="bold">	CSCO	</span>-	Cisco Systems, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	CVX	</span>-	Chevron Corporation	</li>
+            <li class="list-group-item"> 	<span class="bold">	DAL	</span>-	Delta Air Lines, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	DELL</span>-	Dell Technologies Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	DIS	</span>-	Walt Disney Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	ET	</span>-	Energy Transfer LP	</li>
+            <li class="list-group-item"> 	<span class="bold">	ET	</span>-	Energy Transfer LP	</li>
+            <li class="list-group-item"> 	<span class="bold">	F	</span>-	Ford Motor Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	FB	</span>-	Facebook	</li>
+            <li class="list-group-item"> 	<span class="bold">	FCAU	</span>-	Fiat Chrysler Automobiles N.V.	</li>
+            <li class="list-group-item"> 	<span class="bold">	GE	</span>-	General Electric Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	GM	</span>-	General Motors Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	GOLD	</span>-	Barrick Gold Corporation	</li>
+            <li class="list-group-item"> 	<span class="bold">	GOOGL	</span>-	Alphabet Inc	</li>
+            <li class="list-group-item"> 	<span class="bold">	HD	</span>-	Home Depot	</li>
+            <li class="list-group-item"> 	<span class="bold">	HPE	</span>-	Hewlett Packard Enterprise Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	HPQ	</span>-	HP Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	HST	</span>-	Host Hotels & Resorts, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	INTC	</span>-	Intel Corporation	</li>
+            <li class="list-group-item"> 	<span class="bold">	ITUB	</span>-	Itau Unibanco Holding S.A.	</li>
+            <li class="list-group-item"> 	<span class="bold">	JD	</span>-	JD.com, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	JNJ	</span>-	Johnson & Johnson	</li>
+            <li class="list-group-item"> 	<span class="bold">	JPM	</span>-	JPMorgan Chase & Co	</li>
+            <li class="list-group-item"> 	<span class="bold">	KHC	</span>-	The Kraft Heinz Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	MA	</span>-	Mastercard Incorporated	</li>
+            <li class="list-group-item"> 	<span class="bold">	MGM	</span>-	MGM Resorts International	</li>
+            <li class="list-group-item"> 	<span class="bold">	MSFT	</span>-	Microsoft Corporation	</li>
+            <li class="list-group-item"> 	<span class="bold">	MU	</span>-	Micron Technology, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	NOK	</span>-	Nokia Corporation	</li>
+            <li class="list-group-item"> 	<span class="bold">	PBR	</span>-	Petroleo Brasileiro S.A. - Petrobras	</li>
+            <li class="list-group-item"> 	<span class="bold">	PG	</span>-	Proctor & Gamble Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	SAN	</span>-	Banco Santander, S.A.	</li>
+            <li class="list-group-item"> 	<span class="bold">	SIRI	</span>-	Sirius XM Holdings Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	T	</span>-	AT&T Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	TWTR	</span>-	Twitter, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	UBER	</span>-	Uber Technologies, Inc.	</li>
+            <li class="list-group-item"> 	<span class="bold">	V	</span>-	Visa	</li>
+            <li class="list-group-item"> 	<span class="bold">	VZ	</span>-	Verizon Communications	</li>
+            <li class="list-group-item"> 	<span class="bold">	WFC	</span>-	Wells Fargo & Company	</li>
+            <li class="list-group-item"> 	<span class="bold">	XOM	</span>-	Exxon Mobil Corporation	</li>
+    </ul>
+
+
+{% endblock %}

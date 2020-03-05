@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <h2> You currently have {{ cash }} </h2>
+    <br><br>
+
+    <div class="float-left title">
+        <h3> Add more cash to your account?</h3>
+    </div>
+
+    <div class="float-center">
+        <form action="/addcash" method="post">
+            <div class="form-group">
+                <input autocomplete="off" id="cash" autofocus class="form-control" name="cash" placeholder="cash" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit" id="submit" disabled>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('#cash').onkeyup = function() {
+        if (document.querySelector('#cash').value === '') {
+            document.querySelector('#submit').disabled = true;
+        }
+        else {
+            document.querySelector('#submit').disabled = false;
+        }
+    }
+    </script>
+
+{% endblock %}
