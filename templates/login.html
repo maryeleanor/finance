@@ -5,6 +5,20 @@
 {% endblock %}
 
 {% block main %}
+
+<h4 class="m-4"> Welcome to my CS50 Finance Web App</h4>
+<h5 style="margin:0 auto; width:80%;"> A website in which users can "buy" and "sell" stocks. 
+    Quote real-time stock prices, 'buy' and 'sell' those stocks with the 'money' you see in your account, and see how
+    your portfolio performs.
+</h5>
+<br><br>
+                        
+<h4 class="m-2"> <a href="/register">Register</a> for an account and try it out. </h4>
+<p class="small text-center text-muted">
+    Please make note of your username and password to log back in. Passwords are not stored in text so I cannot recover
+    it for you.
+</p>
+<br><br>
     <form action="/login" method="post">
         <div class="form-group">
             <input autocomplete="off" id="username" autofocus class="form-control" name="username" placeholder="Username" type="text">
