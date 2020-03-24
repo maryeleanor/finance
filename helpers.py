@@ -65,3 +65,7 @@ def lookup(symbol):
 def usd(value):
     """Format value as USD."""
     return f"${value:,.2f}"
+
+
+# export DATABASE_URL = postgres: // fjxwxmltbneqra: 14048b76e9edb786a84cf371825f7be1c61225e1cbf61bdfd1c2846a2f09e7fc@ec2-35-168-54-239.compute-1.amazonaws.com: 5432/d3m16sv2qdmmpr
+# pgloader finance.db postgres: // fjxwxmltbneqra: 14048b76e9edb786a84cf371825f7be1c61225e1cbf61bdfd1c2846a2f09e7fc@ec2-35-168-54-239.compute-1.amazonaws.com: 5432/d3m16sv2qdmmpr?sslmode = require

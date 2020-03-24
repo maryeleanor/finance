@@ -1,4 +1,5 @@
 import os
+import sqlalchemy
 from cs50 import SQL
 import sqlite3
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -361,6 +362,8 @@ def register():
 
         # Hash pw
         hash = generate_password_hash(request.form.get("password"), method='pbkdf2:sha256', salt_length=8)
+
+        db.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, username TEXT, hash TEXT, cash NUMERIC DEFAULT '10000')")
 
         # Add new user to db
         db.execute("INSERT INTO users (username, hash) VALUES (:username, :hash)", username=request.form.get("username"), hash=hash)
