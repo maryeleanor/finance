@@ -7,8 +7,7 @@
 {% block main %}
 
 <h4 class="m-4"> Welcome to my CS50 Finance Web App</h4>
-<h5 style="margin:0 auto; width:80%;"> A website in which users can "buy" and "sell" stocks. 
-    Quote real-time stock prices, 'buy' and 'sell' those stocks with the 'money' you see in your account, and see how
+<h5 style="margin:0 auto; width:80%;"> This is a website in which users can quote real-time stock prices, 'buy' and 'sell' those stocks with the 'money' in your account, and see how
     your portfolio performs.
 </h5>
 <br><br>
@@ -20,11 +19,12 @@
 </p>
 <br><br>
     <form action="/login" method="post">
-        <div class="form-group">
-            <input autocomplete="off" id="username" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        <div class="form-group">   <h5>Username 
+            <input autocomplete="off" id="username" autofocus class="form-control" name="username" placeholder="Username" type="text"> </h5>
         </div>
         <div class="form-group">
-            <input class="form-control" id="password" name="password" placeholder="Password" type="password">
+            <h5>Password  
+            <input class="form-control" id="password" name="password" placeholder="Password" type="password"> </h5>
         </div>
         <button class="btn btn-primary" id="submit" type="submit" disabled >Log In</button>
     </form>
