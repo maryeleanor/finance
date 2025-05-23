@@ -94,5 +94,5 @@ urllib3==1.25.8
 virtualenv==20.26.6
 WeasyPrint==49
 webencodings==0.5.1
-Werkzeug==0.16.1
+Werkzeug==3.0.6
 wrapt==1.11.2
