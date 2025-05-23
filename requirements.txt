@@ -8,9 +8,9 @@ backports.shutil-which==3.5.2
 beautifulsoup4==4.8.2
 botocore==1.14.9
 bs4==0.0.1
-cairocffi==1.1.0
+cairocffi==1.1.0 
+certifi==2022.12.7 
 CairoSVG==2.5.1
-certifi==2019.11.28
 cffi==1.13.2
 chardet==3.0.4
 check50==3.0.10
