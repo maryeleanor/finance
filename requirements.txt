@@ -90,7 +90,7 @@ tinycss2==1.0.2
 tqdm==4.42.1
 twython==3.7.0
 typed-ast==1.4.1
-urllib3==1.25.8
+urllib3==1.26.19
 virtualenv==20.26.6
 WeasyPrint==49
 webencodings==0.5.1
